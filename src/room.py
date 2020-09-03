@@ -8,3 +8,5 @@ class Room:
 
     def __str__(self):
         return f'Room: {self.name}\n{self.description}'
+    
+    items = []
