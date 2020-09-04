@@ -14,7 +14,11 @@ class Player:
         else:
             print(f'You see the following items:')
             for item in self.room.items:
-                print(item)
+                print(item.name, '-', item.description)
 
-    def take_item(self, item):
-        act = input('Do you want to take all items? y or n: ')
+    def get(self, item):
+        self.inventory.extend(item)
+    
+    def drop(self, item):
+        for i in item:
+            self.inventory.remove(i)
